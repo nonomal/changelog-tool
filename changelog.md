@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.3.0 (????-??-??)
+------------------
+
+* #14 git release will no longer complain about untracked files in a repo, and
+  will no longer add all files before comitting.
+
+
 1.2.1 (2025-05-26)
 ------------------
 
