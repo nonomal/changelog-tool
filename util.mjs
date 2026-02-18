@@ -148,6 +148,7 @@ export function runCommand(command) {
 export function isGitClean() {
 
   const result = execSync('git status --porcelain=v1').toString('utf-8');
-  return result.trim().length === 0;
+  const trackedChanges = result.split('\n').filter(line => line.length > 0 && !line.startsWith('??'));
+  return trackedChanges.length === 0;
 
 }
