@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.4.0 (????-??-??)
+------------------
+
+* Now requires Node 20. Older versions may work but are out of support.
+
+
 1.3.0 (2026-02-18)
 ------------------
 

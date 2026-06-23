@@ -3,15 +3,19 @@
 import { parseArgs } from 'node:util';
 import * as fs from 'node:fs/promises';
 import * as url from 'node:url';
+import * as path from 'node:path';
 import { readPackageVersion, exists, calculateNextVersion, isGit, isGitClean, runCommand } from './util.mjs';
-import { Changelog, VersionLog, LogItem } from './changelog.mjs';
+import { Changelog, VersionLog } from './changelog.mjs';
 import { parseFile } from './parse.mjs';
 
 const filename = 'changelog.md';
 
 const pkg = JSON.parse(
   await fs.readFile(
-    url.fileURLToPath(url.resolve(import.meta.url, './package.json')),
+    path.join(
+      url.fileURLToPath(import.meta.url),
+      '../package.json'
+    ),
     'utf-8',
   )
 );
