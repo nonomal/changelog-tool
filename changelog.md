@@ -5,6 +5,7 @@ Changelog
 ------------------
 
 * Now requires Node 20. Older versions may work but are out of support.
+* Removed an ugly deprecated warning that was introduced in Node 24.x.
 
 
 1.3.0 (2026-02-18)
